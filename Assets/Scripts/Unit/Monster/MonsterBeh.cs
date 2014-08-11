@@ -13,9 +13,9 @@ public class MonsterBeh : AbsLifeUnitBeh
 
     }
 
-    protected override bool HasAttackTargetArround()
+    public override System.Collections.Generic.Dictionary<string, float> GetAttackTargetDistance()
     {
-        return base.HasAttackTargetArround();
+        return base.GetAttackTargetDistance();
     }
 
     private void SetDestinationPos()
@@ -25,5 +25,15 @@ public class MonsterBeh : AbsLifeUnitBeh
         float z = Random.Range(-5f,5f);
 
         this.Bb.SetDataValue("DestinationPos", curPos + new Vector3(x,0,z));
+    }
+
+    void MonsterDie()
+    {
+        string monsterId = this.Bb.GetDataValue<string>("MonsterId");
+        if (GameManagerBeh.Instance().monsterDict.ContainsKey(monsterId))
+        {
+            GameManagerBeh.Instance().monsterDict.Remove(monsterId);
+        }
+        Debug.Log("Monster " + monsterId + " Die!!!");
     }
 }

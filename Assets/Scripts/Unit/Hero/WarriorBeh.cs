@@ -7,6 +7,8 @@ using whitecat.input;
 
 public class WarriorBeh : AbsLifeUnitBeh 
 {
+    public float warriorAttackDistance;
+
     void AttackListener()
     {
         FSMState currentState = this.Fsm.GetStateWithName(this.Fsm.currentStateName);
@@ -81,13 +83,23 @@ public class WarriorBeh : AbsLifeUnitBeh
         if (this.Bb.GetDataValue<bool>("StateDone"))
         {
             if(this.connectionCache.Count > 0)
+            {
                 this.Fsm.SendEvent(this.connectionCache.Pop());
+                GameManagerBeh.Instance().WarriorAttack();
+            }
         }
     }
 
-    protected override bool HasAttackTargetArround()
+    public override Dictionary<string, float> GetAttackTargetDistance()
     {
-        return base.HasAttackTargetArround();
+        Dictionary<string, float> attackTargetDistanceDict = new Dictionary<string, float>();
+        Dictionary<string, GameObject> monsterDict = GameManagerBeh.Instance().monsterDict;
+        foreach (string id in monsterDict.Keys)
+        {
+            attackTargetDistanceDict.Add(id, FightCommon.Instance().GetDistance(this.CacheTransform, monsterDict[id].transform));
+        }
+
+        return attackTargetDistanceDict;
     }
 
     protected override void Awake()

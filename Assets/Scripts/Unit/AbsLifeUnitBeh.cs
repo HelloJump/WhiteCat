@@ -30,9 +30,9 @@ abstract public class AbsLifeUnitBeh : AbsUnitBeh
 
     protected Stack<string> connectionCache = new Stack<string>();
 
-    virtual protected bool HasAttackTargetArround()
+    virtual public Dictionary<string, float> GetAttackTargetDistance()
     {
-        return false;
+        return null;
     }
 
     public float speed = 1;
