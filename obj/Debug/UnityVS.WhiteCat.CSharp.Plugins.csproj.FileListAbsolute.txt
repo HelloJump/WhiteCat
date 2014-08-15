@@ -5,3 +5,5 @@ F:\WhiteCat\Temp\UnityVS_bin\Debug\UnityEngine.dll
 F:\WhiteCat\obj\Debug\UnityVS.WhiteCat.CSharp.Plugins.csprojResolveAssemblyReference.cache
 F:\WhiteCat\obj\Debug\Assembly-CSharp-firstpass.dll
 F:\WhiteCat\obj\Debug\Assembly-CSharp-firstpass.pdb
+F:\WhiteCat\Temp\UnityVS_bin\Debug\UnityEngine.xml
+F:\WhiteCat\Temp\UnityVS_bin\Debug\UnityEditor.xml

@@ -85,7 +85,7 @@ public class WarriorBeh : AbsLifeUnitBeh
             if(this.connectionCache.Count > 0)
             {
                 this.Fsm.SendEvent(this.connectionCache.Pop());
-                GameManagerBeh.Instance().WarriorAttack();
+                //GameManagerBeh.Instance().WarriorAttack();
             }
         }
     }

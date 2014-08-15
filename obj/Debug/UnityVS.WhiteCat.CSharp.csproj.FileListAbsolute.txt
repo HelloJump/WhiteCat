@@ -7,3 +7,5 @@ F:\WhiteCat\obj\Debug\Assembly-CSharp.dll
 F:\WhiteCat\obj\Debug\Assembly-CSharp.pdb
 F:\WhiteCat\Temp\UnityVS_bin\Debug\Assembly-UnityScript-firstpass.pdb
 F:\WhiteCat\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb
+F:\WhiteCat\Temp\UnityVS_bin\Debug\UnityEngine.xml
+F:\WhiteCat\Temp\UnityVS_bin\Debug\UnityEditor.xml
