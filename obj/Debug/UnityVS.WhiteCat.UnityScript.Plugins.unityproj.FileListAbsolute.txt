@@ -7,3 +7,12 @@ F:\WhiteCat\obj\Debug\Assembly-UnityScript-firstpass.dll
 F:\WhiteCat\obj\Debug\Assembly-UnityScript-firstpass.pdb
 F:\WhiteCat\Temp\UnityVS_bin\Debug\UnityEngine.xml
 F:\WhiteCat\Temp\UnityVS_bin\Debug\UnityEditor.xml
+E:\Projects\WhiteCat\Temp\UnityVS_bin\Debug\Assembly-UnityScript-firstpass.dll
+E:\Projects\WhiteCat\Temp\UnityVS_bin\Debug\Assembly-UnityScript-firstpass.pdb
+E:\Projects\WhiteCat\Temp\UnityVS_bin\Debug\UnityEditor.dll
+E:\Projects\WhiteCat\Temp\UnityVS_bin\Debug\UnityEngine.dll
+E:\Projects\WhiteCat\Temp\UnityVS_bin\Debug\UnityEngine.xml
+E:\Projects\WhiteCat\Temp\UnityVS_bin\Debug\UnityEditor.xml
+E:\Projects\WhiteCat\obj\Debug\UnityVS.WhiteCat.UnityScript.Plugins.unityprojResolveAssemblyReference.cache
+E:\Projects\WhiteCat\obj\Debug\Assembly-UnityScript-firstpass.dll
+E:\Projects\WhiteCat\obj\Debug\Assembly-UnityScript-firstpass.pdb

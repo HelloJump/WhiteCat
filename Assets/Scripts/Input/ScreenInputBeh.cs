@@ -3,6 +3,14 @@ using System.Collections;
 
 namespace whitecat.input
 {
+    public enum MoveState
+    {
+        IDLE,
+        WALK,
+        RUN,
+        ROLL
+    }
+
     public class ScreenInputBeh : AbsInputBeh
     {
         private const float rollCheckTime = 0.5f;
@@ -11,12 +19,7 @@ namespace whitecat.input
         private const float skillCheckOffset = 10f;
         private const float skillCheckTime = 1f;
 
-        public enum MoveState
-        {
-            WALK,
-            RUN,
-            ROLL
-        }
+        
 
         public GameObject InputMessageReceiver;
         void OnClick()
@@ -50,7 +53,6 @@ namespace whitecat.input
                 {
                     InputMessageReceiver.SendMessage("MoveListener", MoveState.ROLL);
                     InputMessageReceiver.SendMessage("MoveDestinationListener", endOffsetVec2);
-                    Debug.Log("roll");
                 }
                 pressTime = 0;
                 skillTime = 0;
@@ -71,6 +73,7 @@ namespace whitecat.input
             if (skillTime >= skillCheckTime && this.isPress)
             {
                 InputMessageReceiver.SendMessage("SkillStateListener");
+                Debug.Log("SkillStateListener");
             }
 
             if (this.isPress && this.pressTime >= rollCheckTime)
@@ -78,20 +81,19 @@ namespace whitecat.input
                 if (endOffset <= skillCheckOffset && skillTime >= skillCheckTime)
                 {
                     InputMessageReceiver.SendMessage("StagnantListener");
+                    Debug.Log("StagnantListener");
                 }
                 else if (endOffset > skillCheckOffset && endOffset <= walkCheckOffset)
                 {
                     skillTime = 0;
                     InputMessageReceiver.SendMessage("MoveListener", MoveState.WALK);
                     InputMessageReceiver.SendMessage("MoveDestinationListener", endOffsetVec2);
-                    Debug.Log("Input Walk");
                 }
                 else if (endOffset > walkCheckOffset)
                 {
                     skillTime = 0;
                     InputMessageReceiver.SendMessage("MoveListener", MoveState.RUN);
                     InputMessageReceiver.SendMessage("MoveDestinationListener", endOffsetVec2);
-                    Debug.Log("Input Run");
                 }
             }
         }

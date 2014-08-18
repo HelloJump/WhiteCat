@@ -69,6 +69,6 @@ public class EntityManager : MonoBehaviour
 
         }
 
-        return null;
+        return new List<int>();
     }
 }
